@@ -87,7 +87,7 @@ export const parseTextTransformations = (textTransformations: any): TextTransfor
         (transformation: string): TextTransformation => {
             let params = transformation
             let target: string | RegExp = params[0]
-            let output = params[1]
+            let output = params.split(',')[1]
             if (transformation.indexOf('/') === 0) {
                 let expression = transformation.split('/')[1]
                 expression = expression.concat('([ .:!%E2%80%9D,?])')
