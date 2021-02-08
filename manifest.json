@@ -1,0 +1,18 @@
+{
+    "name": "Korsoraattori",
+    "version": "1.0",
+    "description": "Korsoraattori käärys",
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": "images/korson_kyltti_pieni.png",
+        "default_title": "Korsoroi"
+    },
+    "background": {
+        "scripts": [
+            "dist/background.js"
+        ]
+    }
+}
