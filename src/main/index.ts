@@ -1,5 +1,5 @@
 import { appendWords, textTransformations } from './constants'
-import { getPosition, parseTextTransformations, createImage, createImageWrapper } from './utils'
+import { getPosition, parseTextTransformations, createImage, createImageWrapper, randomFromArray } from './utils'
 
 const parsedTextTransformations = parseTextTransformations(textTransformations)
 
@@ -41,11 +41,14 @@ const transformText = () => {
             words.forEach((word: string) => {
                 output += word + ' '
                 if (word.length > 0 && Math.random() > 0.8) {
-                    output += appendWords[Math.floor(Math.random() * 3)] + ' '
+                    output += randomFromArray(appendWords) + ' '
                 }
             })
-            parsedTextTransformations.forEach((transformation) => {
+            console.log(output)
+            parsedTextTransformations.forEach(function (transformation) {
+                console.log(transformation[0], transformation[1])
                 output = output.replace(transformation[0], transformation[1])
+                console.log(output)
             })
             if (Math.random() > 0.7) {
                 output += ' xD! '

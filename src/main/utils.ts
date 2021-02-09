@@ -51,7 +51,7 @@ export const createImageWrapper = (
 export const createImage = (currentImage: HTMLImageElement): HTMLImageElement => {
     let newImage = document.createElement('img')
 
-    newImage.src = images[Math.floor(Math.random() * images.length)]
+    newImage.src = randomFromArray(images)
     newImage.width = currentImage.width * Math.random()
     newImage.height = currentImage.height * Math.random()
 
@@ -85,14 +85,15 @@ export const getPosition = (el: HTMLElement): Position => {
 export const parseTextTransformations = (textTransformations: any): TextTransformation[] => {
     return textTransformations.map(
         (transformation: string): TextTransformation => {
-            let params = transformation
+            let params = transformation.split(',')
             let target: string | RegExp = params[0]
-            let output = params.split(',')[1]
+            let output = params[1]
             if (transformation.indexOf('/') === 0) {
                 let expression = transformation.split('/')[1]
-                expression = expression.concat('([ .:!%E2%80%9D,?])')
+                expression = expression.concat('([ .:!”,?])')
                 target = new RegExp(expression, 'g')
             }
+            console.log(target, output)
             return [target, output]
         }
     )
