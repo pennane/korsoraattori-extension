@@ -44,11 +44,8 @@ const transformText = () => {
                     output += randomFromArray(appendWords) + ' '
                 }
             })
-            console.log(output)
             parsedTextTransformations.forEach(function (transformation) {
-                console.log(transformation[0], transformation[1])
                 output = output.replace(transformation[0], transformation[1])
-                console.log(output)
             })
             if (Math.random() > 0.7) {
                 output += ' xD! '

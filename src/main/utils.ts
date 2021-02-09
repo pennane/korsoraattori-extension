@@ -93,7 +93,6 @@ export const parseTextTransformations = (textTransformations: any): TextTransfor
                 expression = expression.concat('([ .:!”,?])')
                 target = new RegExp(expression, 'g')
             }
-            console.log(target, output)
             return [target, output]
         }
     )
