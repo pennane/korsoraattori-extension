@@ -6,8 +6,13 @@
     "permissions": [
         "activeTab"
     ],
+    "icons": {
+        "16": "korsi16.png",
+        "48": "korso48.png",
+        "128": "korso128.png"
+    },
     "browser_action": {
-        "default_icon": "images/korson_kyltti_pieni.png",
+        "default_icon": "images/korso128.png",
         "default_title": "Korsoroi"
     },
     "background": {
