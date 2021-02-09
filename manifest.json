@@ -1,15 +1,16 @@
 {
     "name": "Korsoraattori",
     "version": "1.0",
-    "description": "Korsoraattori käärys",
+    "description": "Halpa muovikopio Korsoraattorista",
     "manifest_version": 2,
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "tabs"
     ],
     "icons": {
-        "16": "korsi16.png",
-        "48": "korso48.png",
-        "128": "korso128.png"
+        "16": "images/korso16.png",
+        "48": "images/korso48.png",
+        "128": "images/korso128.png"
     },
     "browser_action": {
         "default_icon": "images/korso128.png",
