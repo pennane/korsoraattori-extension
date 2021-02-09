@@ -24,8 +24,6 @@ const appendImages = (): void => {
 }
 
 const transformText = () => {
-    if (/korsoraattori/.test(location.hostname)) return
-
     let nodeIterator = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT)
     let currentNode
     while ((currentNode = nodeIterator.nextNode())) {
@@ -73,6 +71,7 @@ const handleScroll = (): void => {
 }
 
 export const main = () => {
+    if (/korsoraattori/.test(location.hostname)) return
     transformText()
     appendImages()
     document.removeEventListener('scroll', handleScroll)
