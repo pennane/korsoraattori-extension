@@ -1,6 +1,6 @@
 {
     "name": "Korsoraattori",
-    "version": "1.0",
+    "version": "0.1.0",
     "description": "Halpa muovikopio Korsoraattorista",
     "manifest_version": 2,
     "permissions": [
