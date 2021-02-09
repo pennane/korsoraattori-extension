@@ -6,7 +6,11 @@
   "scripts": {
     "build:extension": "NODE_ENV=production webpack --config webpack.config.js",
     "build": "npm run build:extension",
-    "zip": "bestzip extension.zip dist/*"
+    "package:prepare": "mkdir -p package && mkdir -p package/images && mkdir -p package/dist",
+    "package:copy": "cp -R images package/images && cp -R dist package/dist && cp manifest.json package/ ",
+    "package:zip": "bestzip extension.zip package/* ",
+    "package:clean": "rm -rf package",
+    "pack": "npm run package:clean && npm run package:prepare && npm run package:copy && npm run package:zip && npm run package:clean"
   },
   "keywords": [],
   "author": "Arttu Pennanen <arttuinthewoods@gmail.com>",
