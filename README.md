@@ -8,8 +8,10 @@ Lataa uusin versio [täältä](https://github.com/Pennane/korsoraattori-extensio
 ## Asentaminen
 - Pura arkisto
 - Avaa chromesssa `chrome://extensions/`
+- Varmista, että kehittäjätila on päällä (sivun oikea ylänurkka)
 - Valitse `Lataa pakkaamaton`
 - Lataa lisäosa
+- Lisäosan voi nyt ottaa käyttöön
 
 ### Lisäosan itse rakentaminen
 
